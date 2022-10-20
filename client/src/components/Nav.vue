@@ -35,18 +35,18 @@
             </router-link>
 
             <div class="navbar-item" style="">
-              <form class="box" style="">
+              
                 <div class="feild">
-                    <div class="control">
+                  
                       <input class="input" type="search" placeholder="Explore Review Station!">
-                    </div>
+                    
 
                 </div>
               
-              </form>
+            
             </div>
 
-            <router-link class="navbar-item" to="/store" style="margin-left:555px;">
+            <router-link class="navbar-item" to="/store" style="margin-left:455px;">
               Merch Store
             </router-link>
             
