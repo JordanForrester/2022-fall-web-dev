@@ -34,10 +34,27 @@
               Trending Projects
             </router-link>
 
-            <router-link class="navbar-item" to="/store" style="">
+            <div class="navbar-item" style="">
+              <form class="box" style="">
+                <div class="feild">
+                    <div class="control">
+                      <input class="input" type="search" placeholder="Explore Review Station!">
+                    </div>
+
+                </div>
+              
+              </form>
+            </div>
+
+            <router-link class="navbar-item" to="/store" style="margin-left:555px;">
               Merch Store
             </router-link>
-      
+            
+
+            <div class="block">
+              
+            </div>
+
             <div class="navbar-item has-dropdown is-hoverable">
               <a class="navbar-link">
                 More
