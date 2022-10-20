@@ -1,9 +1,11 @@
+
 <script setup lang="ts">
-import TheWelcome from "../components/TheWelcome.vue";
+
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <h1 class="title">Welcome to Review Station</h1>
+    <h2 class="subtitle">The page where you land</h2>
   </main>
 </template>
