@@ -31,29 +31,30 @@
             </router-link>
       
             <router-link class="navbar-item" to="/store" style="">
-              Trending Projects
+              Merch Store
             </router-link>
 
-            <div class="navbar-item" style="">
+            <div class="navbar-item" style="margin-left:100px;">
               
                 <div class="feild">
-                  
                       <input class="input" type="search" placeholder="Explore Review Station!">
-                    
-
                 </div>
               
             
             </div>
 
-            <router-link class="navbar-item" to="/store" style="margin-left:455px;">
-              Merch Store
+            <div class="navbar-item" >
+              <button class="button">
+                Search
+              </button>
+            </div>
+
+            <router-link class="navbar-item" to="/store" style="margin-left:190px;">
+              About Us
             </router-link>
             
 
-            <div class="block">
-              
-            </div>
+           
 
             <div class="navbar-item has-dropdown is-hoverable">
               <a class="navbar-link">
@@ -61,11 +62,8 @@
               </a>
       
               <div class="navbar-dropdown">
-                <router-link class="navbar-item" to="/about">
-                  About
-                </router-link>
                 <a class="navbar-item">
-                  Jobs
+                  Developer Verification
                 </a>
                 <a class="navbar-item">
                   Contact

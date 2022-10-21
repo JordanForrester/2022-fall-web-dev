@@ -1,11 +1,12 @@
 
 <script setup lang="ts">
-
+import Post from '../components/Post.vue';
 </script>
 
 <template>
   <main>
-    <h1 class="title">Welcome to Review Station</h1>
-    <h2 class="subtitle">The page where you land</h2>
+
+      <div><Post/> </div>     
+   
   </main>
 </template>
