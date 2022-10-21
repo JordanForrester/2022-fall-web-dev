@@ -30,7 +30,7 @@
               Home
             </router-link>
       
-            <router-link class="navbar-item" to="/store" style="">
+            <router-link class="navbar-item" to="/merch" style="">
               Merch Store
             </router-link>
 
