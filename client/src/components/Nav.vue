@@ -1,6 +1,7 @@
 <script setup lang="ts">
     import { ref } from 'vue';
     import { RouterLink } from "vue-router";
+    import LoginBadge from "./LoginBadge.vue";
     
     let isActive = ref(false);
 </script>
@@ -34,7 +35,7 @@
               Merch Store
             </router-link>
 
-            <div class="navbar-item" style="margin-left:100px;">
+            <div class="navbar-item" style="margin-left:75px;">
               
                 <div class="feild">
                       <input class="input" type="search" placeholder="Explore Review Station!">
@@ -49,7 +50,12 @@
               </button>
             </div>
 
-            <router-link class="navbar-item" to="/store" style="margin-left:190px;">
+            <div class="navbar-item" style="margin-left:25px">
+              <LoginBadge/>
+            </div>
+
+
+            <router-link class="navbar-item" to="/about" style="margin-left:5px;">
               About Us
             </router-link>
             
