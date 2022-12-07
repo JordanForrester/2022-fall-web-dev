@@ -26,7 +26,7 @@ app
 .get('/error', (req, res) => {
     sss.PORT();
 })
-.use('/api/v1/products', productsController)
+.use('/api/v1/store', productsController)
 .use('/api/v1/cart', cartController)
 
 app.get('*', (req, res) => {

@@ -1,18 +1,26 @@
 <script setup lang="ts">
+    import { RouterLink } from 'vue-router';
     import session, { login, logout } from '../stores/session'
-</script>
 
+    
+</script>
+<script lang="ts">
+
+   
+</script>
 <template>
     <div class="buttons" v-if="session.user == null">
-        <a class="button is-primary">
-            <strong>Sign up</strong>
-        </a>
-        <a class="button is-light" @click="login('Jordan', 'Forrester')">
+        
+        <RouterLink class="button is-light" to="login">
             Log in
-        </a>
+        </RouterLink>
     </div>
-    <div v-else>
-        Welcome {{session.user.firstName}} {{session.user.lastName}}
+    <div v-else class="profile">
+        <img :src="session.user.profile_picture" />
+        <span>
+            {{session.user.name}} ({{session.user.email}})            
+        </span>
+
         (<a @click="logout()">
             Log out
         </a>)
@@ -22,4 +30,14 @@
 
 
 <style scoped>
+    .profile {
+        display: flex;
+        align-items: center
+    }
+    .profile img {
+
+        border-radius: 50%;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
 </style>

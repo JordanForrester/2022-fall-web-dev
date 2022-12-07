@@ -2,11 +2,19 @@
     import { ref } from 'vue';
     import { RouterLink } from "vue-router";
     import LoginBadge from "./LoginBadge.vue";
+    import Cart from './Cart.vue';
+
+
+
     
     let isActive = ref(false);
+    const isCartOpen = ref(false);
 </script>
 
 <template>
+
+<Cart :is-open="isCartOpen" />
+
     <nav class="navbar is-black" role="navigation" aria-label="main navigation" >
 
         <div class="container">
@@ -31,11 +39,11 @@
               Home
             </router-link>
       
-            <router-link class="navbar-item" to="/merch" style="">
+            <router-link class="navbar-item" to="/store" style="">
               Merch Store
             </router-link>
 
-            <div class="navbar-item" style="margin-left:75px;">
+            <div class="navbar-item" style="margin-left:45px;">
               
                 <div class="feild">
                       <input class="input" type="search" placeholder="Explore Review Station!">
@@ -59,7 +67,11 @@
               About Us
             </router-link>
             
-
+            <div class="navbar-item">
+                <button class="button is-primary" @click="isCartOpen = !isCartOpen">
+                  <strong>Check out</strong>
+                </button>
+              </div>
            
 
             <div class="navbar-item has-dropdown is-hoverable">

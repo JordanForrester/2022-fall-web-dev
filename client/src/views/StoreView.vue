@@ -5,7 +5,7 @@
     import { getProducts, type Product } from "../stores/products";
 
     const products = reactive([] as Product[]);
-    getProducts().then( x=> products.push(...x.products));
+    getProducts().then( x=> products.push(... x.products));
 
 </script> 
 
@@ -17,21 +17,27 @@
 
 
 
-    <div class="box" style="background-color:hsl(247, 11%, 67%); margin-top: 25px;">
-        <RouterLink v-for="product in products" :key="product._id"
-        class="product" :class="{ 'is-disabled': isLoading }"
-                        :to="`/product/${product._id}`">
+    <div class="container" style="background-color:hsl(247, 11%, 67%); margin-top: 25px; width: 100vw; height: 100vw;">
 
+        <div class="columns">
 
-            <div class="product-image">
-            <img :src="product.image" :alt="product.name" />
-            </div>
+            <RouterLink v-for="product in products" :key="product._id"
+            class="column"
+             :class="{ 'is-disabled': isLoading }" :to="`/product/${product._id}`">
 
+        <div class="box">
+            <b>{{product.name}}</b>
 
-
-        
-        
+            <figure class="image is-64x64">
+                <img :src="product.image" alt = "image unable to load" >
+            </figure> 
+            
+            <strong>{{product.price}}</strong>
+            
+        </div>
         </RouterLink>
+
+        </div>
         
         
 
@@ -54,5 +60,21 @@
 
 
 </template>
+
+
+
+<style scoped>
+   
+   
+
+    .product{
+        height: 100vh;
+        width: 100vw;
+    }
+   
+
+
+   
+</style>
 
 
